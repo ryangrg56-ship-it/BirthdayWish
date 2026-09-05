@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+
+/* =========================
+   GLOBAL DESIGN
+========================= */
+
+:root {
+    --bg: #08070b;
+    --card: rgba(255,255,255,0.07);
+    --line: rgba(255,255,255,0.12);
+
+    --pink: #ff4f87;
+    --pink-light: #ff9ab8;
+
+    --text: #fff7fa;
+    --muted: #b9aeb5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+    radial-gradient(
+        circle at 50% -20%,
+        #35101e 0%,
+        var(--bg) 45%
+    );
+
+    color: var(--text);
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   FLOATING PARTICLES
+========================= */
+
+#particles {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+.particle {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--pink-light);
+
+    animation: float linear infinite;
+
+}
+
+@keyframes float {
+
+    from {
+
+        transform:
+        translateY(100vh)
+        translateX(0);
+
+        opacity: 0;
+
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    to {
+
+        transform:
+        translateY(-10vh)
+        translateX(70px);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+
+}
+
+.hero-card {
+
+    max-width: 900px;
+
+    text-align: center;
+
+    padding:
+    60px
+    30px;
+
+    border-radius: 30px;
+
+    border:
+    1px solid
+    var(--line);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.10),
+        rgba(255,255,255,0.02)
+    );
+
+    backdrop-filter:
+    blur(20px);
+
+    box-shadow:
+    0 20px 80px
+    rgba(0,0,0,0.5);
+
+}
+
+.kicker {
+
+    color:
+    var(--pink-light);
+
+    text-transform:
+    uppercase;
+
+    letter-spacing:
+    4px;
+
+    font-size:
+    12px;
+
+}
+
+.heart {
+
+    font-size:
+    60px;
+
+    margin:
+    20px 0;
+
+    animation:
+    heartbeat
+    1.5s infinite;
+
+}
+
+@keyframes heartbeat {
+
+    50% {
+
+        transform:
+        scale(1.15);
+
+    }
+
+}
+
+.hero h1 {
+
+    font-size:
+    clamp(
+        55px,
+        10vw,
+        120px
+    );
+
+    line-height:
+    0.9;
+
+    margin:
+    20px 0;
+
+    background:
+    linear-gradient(
+        120deg,
+        white,
+        #ffb1c9,
+        #ff4f87
+    );
+
+    -webkit-background-clip:
+    text;
+
+    color:
+    transparent;
+
+}
+
+.hero p {
+
+    max-width:
+    650px;
+
+    margin:
+    auto;
+
+    color:
+    var(--muted);
+
+    font-size:
+    18px;
+
+    line-height:
+    1.7;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+
+    margin-top:
+    30px;
+
+    padding:
+    16px
+    28px;
+
+    border:
+    none;
+
+    border-radius:
+    50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--pink),
+        #ff7aa5
+    );
+
+    color:
+    white;
+
+    font-size:
+    16px;
+
+    font-weight:
+    bold;
+
+    cursor:
+    pointer;
+
+    transition:
+    0.3s;
+
+    box-shadow:
+    0 10px 30px
+    rgba(255,79,135,0.3);
+
+}
+
+.btn:hover {
+
+    transform:
+    translateY(-3px)
+    scale(1.03);
+
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+
+    width:
+    min(
+        1100px,
+        92vw
+    );
+
+    margin:
+    auto;
+
+    padding:
+    100px 0;
+
+}
+
+.label {
+
+    color:
+    var(--pink-light);
+
+    text-transform:
+    uppercase;
+
+    letter-spacing:
+    3px;
+
+    font-size:
+    12px;
+
+    font-weight:
+    bold;
+
+}
+
+.title {
+
+    font-size:
+    clamp(
+        40px,
+        6vw,
+        80px
+    );
+
+    margin:
+    15px 0;
+
+}
+
+.subtitle {
+
+    color:
+    var(--muted);
+
+    font-size:
+    17px;
+
+    line-height:
+    1.8;
+
+}
+
+
+/* =========================
+   MEMORY SECTION
+========================= */
+
+.memory {
+
+    display:
+    grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:
+    50px;
+
+    align-items:
+    center;
+
+    margin-top:
+    70px;
+
+}
+
+.photo-wrap {
+
+    padding:
+    14px;
+
+    border-radius:
+    28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.15),
+        rgba(255,79,135,0.08)
+    );
+
+    box-shadow:
+    0 30px 80px
+    rgba(0,0,0,0.5);
+
+}
+
+.photo {
+
+    width:
+    100%;
+
+    display:
+    block;
+
+    border-radius:
+    18px;
+
+    max-height:
+    650px;
+
+    object-fit:
+    cover;
+
+}
+
+.copy h3 {
+
+    font-size:
+    clamp(
+        35px,
+        4vw,
+        55px
+    );
+
+    margin:
+    10px 0;
+
+}
+
+.copy p {
+
+    color:
+    var(--muted);
+
+    font-size:
+    17px;
+
+    line-height:
+    1.8;
+
+}
+
+.tag {
+
+    display:
+    inline-block;
+
+    padding:
+    8px 14px;
+
+    border:
+    1px solid
+    var(--line);
+
+    border-radius:
+    50px;
+
+    color:
+    var(--pink-light);
+
+}
+
+
+/* =========================
+   FAVORITE PHOTO
+========================= */
+
+.favorite-card {
+
+    padding:
+    35px;
+
+    border-radius:
+    30px;
+
+    border:
+    1px solid
+    var(--line);
+
+    background:
+    var(--card);
+
+    backdrop-filter:
+    blur(20px);
+
+}
+
+
+/* =========================
+   GIFT SECTION
+========================= */
+
+.gift-section {
+
+    text-align:
+    center;
+
+    padding:
+    70px 20px;
+
+    border-radius:
+    35px;
+
+    border:
+    1px solid
+    var(--line);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,79,135,0.1),
+        rgba(255,255,255,0.03)
+    );
+
+}
+
+.gift-box {
+
+    font-size:
+    100px;
+
+    cursor:
+    pointer;
+
+    transition:
+    0.4s;
+
+}
+
+.gift-box:hover {
+
+    transform:
+    scale(1.15)
+    rotate(-8deg);
+
+}
+
+.gift-reveal {
+
+    display:
+    none;
+
+    max-width:
+    350px;
+
+    margin:
+    30px auto;
+
+    animation:
+    reveal
+    0.7s ease;
+
+}
+
+.gift-reveal.show {
+
+    display:
+    block;
+
+}
+
+.gift-reveal img {
+
+    width:
+    100%;
+
+    border-radius:
+    25px;
+
+}
+
+@keyframes reveal {
+
+    from {
+
+        opacity:
+        0;
+
+        transform:
+        scale(0.7);
+
+    }
+
+    to {
+
+        opacity:
+        1;
+
+        transform:
+        scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.letter {
+
+    max-width:
+    850px;
+
+    margin:
+    auto;
+
+    padding:
+    60px;
+
+    border-radius:
+    30px;
+
+    border:
+    1px solid
+    var(--line);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+
+}
+
+.letter p {
+
+    font-family:
+    Georgia,
+    serif;
+
+    font-size:
+    20px;
+
+    line-height:
+    1.9;
+
+    color:
+    #f5e8ed;
+
+}
+
+.signature {
+
+    text-align:
+    right;
+
+    color:
+    var(--pink-light) !important;
+
+}
+
+
+/* =========================
+   BIRTHDAY WISH
+========================= */
+
+.wish {
+
+    text-align:
+    center;
+
+}
+
+.cake {
+
+    font-size:
+    90px;
+
+    cursor:
+    pointer;
+
+    transition:
+    0.3s;
+
+}
+
+.cake:hover {
+
+    transform:
+    scale(1.15);
+
+}
+
+.hidden-message {
+
+    max-height:
+    0;
+
+    overflow:
+    hidden;
+
+    transition:
+    0.8s;
+
+    max-width:
+    650px;
+
+    margin:
+    auto;
+
+    color:
+    var(--muted);
+
+    line-height:
+    1.8;
+
+}
+
+.hidden-message.open {
+
+    max-height:
+    400px;
+
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal {
+
+    opacity:
+    0;
+
+    transform:
+    translateY(50px);
+
+    transition:
+    1s ease;
+
+}
+
+.reveal.visible {
+
+    opacity:
+    1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align:
+    center;
+
+    padding:
+    40px;
+
+    color:
+    #8c7d84;
+
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media
+(max-width: 750px) {
+
+    .memory {
+
+        grid-template-columns:
+        1fr;
+
+        gap:
+        30px;
+
+    }
+
+    .hero-card {
+
+        padding:
+        45px 20px;
+
+    }
+
+    .letter {
+
+        padding:
+        30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- PARTICLES -->
+
+<div id="particles"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-card">
+
+        <div class="kicker">
+            A little universe made for you ✦
+        </div>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <h1>
+            Happy Birthday,
+            <br>
+            My Love.
+        </h1>
+
+        <p>
+            Today isn't just your birthday.
+            It's a celebration of the beautiful
+            person who makes my world feel
+            more special.
+        </p>
+
+        <button
+        class="btn"
+        onclick="
+        document.getElementById('story')
+        .scrollIntoView()
+        ">
+
+            Begin Our Story ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FIRST DATE
+========================= -->
+
+<section id="story">
+
+    <div class="label reveal">
+        Chapter One
+    </div>
+
+    <h2 class="title reveal">
+        Where our story began.
+    </h2>
+
+    <p class="subtitle reveal">
+
+        Every beautiful story has a beginning.
+        And ours started with a moment
+        I will always remember.
+
+    </p>
+
+
+    <div class="memory reveal">
+
+        <div class="photo-wrap">
+
+            <img
+            class="photo"
+            src="first-date.png"
+            alt="Our First Date">
+
+        </div>
+
+
+        <div class="copy">
+
+            <span class="tag">
+                📍 Our First Date
+            </span>
+
+            <h3>
+                The beginning of us.
+            </h3>
+
+            <p>
+
+                I don't know if I understood it
+                at that moment, but this day
+                would become one of those
+                memories I would want to
+                keep forever.
+
+            </p>
+
+            <p>
+
+                One photo.
+                One moment.
+                And the beginning of so many
+                memories that followed. ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FAVORITE PHOTO
+========================= -->
+
+<section>
+
+    <div class="favorite-card reveal">
+
+        <div class="label">
+
+            My Favorite Photo
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="photo-wrap">
+
+                <img
+                class="photo"
+                src="favorite-photo.png"
+                alt="My Favorite Photo">
+
+            </div>
+
+
+            <div class="copy">
+
+                <span class="tag">
+                    🥹 A Photo I Really Love
+                </span>
+
+                <h3>
+                    Somehow,
+                    this is my favorite.
+                </h3>
+
+                <p>
+
+                    Before all the moments we
+                    know today, there was
+                    already this little memory
+                    of us.
+
+                </p>
+
+                <p>
+
+                    Every time I look at this
+                    photo, it makes me smile.
+
+                    Some memories are simply
+                    priceless — and this one
+                    will always have a special
+                    place in my heart.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BEST GIFT
+========================= -->
+
+<section>
+
+    <div class="gift-section reveal">
+
+        <div class="label">
+
+            A Little Surprise
+
+        </div>
+
+        <h2 class="title">
+
+            The Best Gift 🎁
+
+        </h2>
+
+        <p class="subtitle">
+
+            Tap the gift to open
+            a memory that means
+            more than it looks like.
+
+        </p>
+
+
+        <div
+        class="gift-box"
+        onclick="openGift()">
+
+            🎁
+
+        </div>
+
+
+        <div
+        class="gift-reveal"
+        id="giftReveal">
+
+            <img
+            src="best-gift.png"
+            alt="Best Gift">
+
+            <h3>
+                My favorite kind of gift ❤️
+            </h3>
+
+            <p>
+
+                Because the best gifts
+                are not always the biggest ones.
+
+                Sometimes, they are the ones
+                that hold a piece of a memory
+                forever.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BIRTHDAY LETTER
+========================= -->
+
+<section>
+
+    <div class="letter reveal">
+
+        <div class="label">
+
+            A Letter For You
+
+        </div>
+
+        <h2 class="title">
+
+            To the girl I love ❤️
+
+        </h2>
+
+
+        <p>
+
+            Happy Birthday, mero sanu.
+
+            I hope today reminds you
+            of just how special you are.
+
+            Thank you for every smile,
+            every memory,
+            every laugh,
+            and every moment that became
+            more beautiful simply because
+            you were there.
+
+        </p>
+
+
+        <p>
+
+            I may not always find the
+            perfect words, but I hope
+            you always know this:
+
+            You mean so much to me.
+
+            I hope this new year of your life
+            brings you happiness,
+            peace,
+            success,
+            and everything your heart
+            secretly wishes for.
+
+        </p>
+
+
+        <p>
+
+            Keep smiling,
+            keep dreaming,
+            and please never forget
+            how beautiful and special
+            you are to me.
+
+            Here's to more memories,
+            more adventures,
+            more photos,
+            and more moments
+            that we will someday
+            look back at and smile about.
+
+        </p>
+
+
+        <p class="signature">
+
+            Forever cheering for you ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MAKE A WISH
+========================= -->
+
+<section class="wish reveal">
+
+    <div
+    class="cake"
+    onclick="makeWish()">
+
+        🎂
+
+    </div>
+
+
+    <h2 class="title">
+
+        Make a wish.
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        Close your eyes for a second,
+        make your wish,
+        and tap the cake. ✨
+
+    </p>
+
+
+    <button
+    class="btn"
+    onclick="makeWish()">
+
+        Make My Birthday Wish 💫
+
+    </button>
+
+
+    <div
+    class="hidden-message"
+    id="wishMessage">
+
+        <h3
+        style="color:#ff9ab8">
+
+            ✨ Wish granted... hopefully!
+
+        </h3>
+
+
+        <p>
+
+            And my wish for you?
+
+            That you stay happy,
+            loved,
+            healthy,
+            and surrounded by beautiful moments —
+            today and always.
+
+            Happy Birthday,
+            beautiful. ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    Made with love,
+    memories,
+    and a little bit of magic ❤️
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   CREATE FLOATING PARTICLES
+========================= */
+
+const particleBox =
+document.getElementById("particles");
+
+
+for (
+let i = 0;
+i < 40;
+i++
+) {
+
+    const particle =
+    document.createElement("div");
+
+    particle.className =
+    "particle";
+
+
+    particle.style.left =
+    Math.random() * 100 + "%";
+
+
+    particle.style.animationDuration =
+    8 + Math.random() * 12 + "s";
+
+
+    particle.style.animationDelay =
+    -Math.random() * 15 + "s";
+
+
+    const size =
+    2 + Math.random() * 5;
+
+
+    particle.style.width =
+    size + "px";
+
+
+    particle.style.height =
+    size + "px";
+
+
+    particleBox.appendChild(
+        particle
+    );
+
+}
+
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const observer =
+new IntersectionObserver(
+
+    function(entries) {
+
+        entries.forEach(
+        function(entry) {
+
+            if (
+                entry.isIntersecting
+            ) {
+
+                entry.target
+                .classList
+                .add("visible");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.15
+    }
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(
+
+    function(element) {
+
+        observer.observe(
+            element
+        );
+
+    }
+
+);
+
+
+
+/* =========================
+   OPEN GIFT
+========================= */
+
+function openGift() {
+
+    const gift =
+    document.getElementById(
+        "giftReveal"
+    );
+
+
+    gift
+    .classList
+    .add("show");
+
+
+    createConfetti(40);
+
+}
+
+
+
+/* =========================
+   MAKE WISH
+========================= */
+
+function makeWish() {
+
+    const message =
+    document.getElementById(
+        "wishMessage"
+    );
+
+
+    message
+    .classList
+    .add("open");
+
+
+    createConfetti(100);
+
+}
+
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(amount) {
+
+    const colors = [
+
+        "#ff4f87",
+        "#ff9ab8",
+        "#ffffff",
+        "#ffd166",
+        "#b68cff"
+
+    ];
+
+
+    for (
+    let i = 0;
+    i < amount;
+    i++
+    ) {
+
+        const confetti =
+        document.createElement("div");
+
+
+        confetti.style.position =
+        "fixed";
+
+
+        confetti.style.top =
+        "-20px";
+
+
+        confetti.style.left =
+        Math.random() * 100 + "vw";
+
+
+        confetti.style.width =
+        "8px";
+
+
+        confetti.style.height =
+        "14px";
+
+
+        confetti.style.background =
+        colors[
+            Math.floor(
+                Math.random()
+                *
+                colors.length
+            )
+        ];
+
+
+        confetti.style.zIndex =
+        "9999";
+
+
+        confetti.style.pointerEvents =
+        "none";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        const duration =
+        2500 +
+        Math.random() * 2500;
+
+
+        confetti.animate(
+
+            [
+
+                {
+                    transform:
+                    "translateY(0px) rotate(0deg)",
+
+                    opacity:
+                    1
+                },
+
+                {
+                    transform:
+                    `translateY(
+                    110vh
+                    )
+                    translateX(
+                    ${Math.random()*200-100}px
+                    )
+                    rotate(
+                    720deg
+                    )`,
+
+                    opacity:
+                    0
+                }
+
+            ],
+
+            {
+
+                duration:
+                duration,
+
+                easing:
+                "linear"
+
+            }
+
+        );
+
+
+        setTimeout(
+
+            function() {
+
+                confetti.remove();
+
+            },
+
+            duration
+
+        );
+
+    }
+
+}
+
+
+</script>
+
+
+</body>
+</html>
